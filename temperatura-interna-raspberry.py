@@ -21,7 +21,7 @@ while (True):
 	temperatura = float(getCPUtemperature())
 
 	# data : hora, temperatura
-	row = [datetime.now().strftime('%d/%m/%Y %H:%M'), temperatura]
+	row = [datetime.now().strftime('%d/%m/%Y %H:%M:%-S'), temperatura]
 
 	with open('log-temperatura.csv', 'a') as f:
 		w = csv.writer(f)
