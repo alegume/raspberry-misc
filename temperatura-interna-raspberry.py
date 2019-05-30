@@ -33,7 +33,6 @@ while (True):
 	try:
 		with open('log-temperatura.csv', 'a') as f:
 			w = csv.writer(f)
-			sheet.append_row(row)
 			w.writerow(row)
 	except:
 		print('Erro ao salvar dado em log-temperatura.csv')
