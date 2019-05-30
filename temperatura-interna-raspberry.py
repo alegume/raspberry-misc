@@ -25,9 +25,15 @@ while (True):
 	# data : hora, temperatura
 	row = [datetime.now().strftime('%d/%m/%Y %H:%M:%-S'), temperatura]
 
-	with open('log-temperatura.csv', 'a') as f:
-		w = csv.writer(f)
+	try :
 		sheet.append_row(row)
-		w.writerow(row)
+	except:
+		print('Erro ao enviar dados para a nuvem')
+	try:
+		open('log-temperatura.csv', 'a') as f:
+			w = csv.writer(f)
+			w
+	except:
+		print('Erro ao salvar dado em log-temperatura.csv')
 
 	time.sleep(10)
