@@ -30,4 +30,4 @@ while (True):
 		sheet.append_row(row)
 		w.writerow(row)
 
-	time.sleep(2)
+	time.sleep(10)
