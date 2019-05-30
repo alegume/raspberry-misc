@@ -32,8 +32,7 @@ while (True):
 	try:
 		open('log-temperatura.csv', 'a') as f:
 			w = csv.writer(f)
-			w
+			w.writerow(row)
 	except:
 		print('Erro ao salvar dado em log-temperatura.csv')
-
-	time.sleep(10)
+		time.sleep(10)
