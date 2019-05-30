@@ -17,17 +17,17 @@
 # Carry out specific functions when asked to by the system
 case "$1" in
  start)
-	 echo "Starting noip"
+	 echo "Starting temperatura-interna"
 	 # run application you want to start
 	 /home/pi/Documents/raspberry-misc/temperatura-interna-raspberry.py
 	 ;;
  stop)
-	 echo "Stopping noip"
+	 echo "Stopping temperatura-interna"
 	 # kill application you want to stop
 	 killall temperatura-interna
 	 ;;
  *)
-	 echo "Usage: /etc/init.d/noip {start|stop}"
+	 echo "Usage: /etc/init.d/temperatura-interna {start|stop}"
 	 exit 1
 	 ;;
 esac

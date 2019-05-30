@@ -30,8 +30,9 @@ while (True):
 	except:
 		print('Erro ao enviar dados para a nuvem')
 	try:
-		open('log-temperatura.csv', 'a') as f:
+		with open('log-temperatura.csv', 'a') as f:
 			w = csv.writer(f)
+			sheet.append_row(row)
 			w.writerow(row)
 	except:
 		print('Erro ao salvar dado em log-temperatura.csv')
