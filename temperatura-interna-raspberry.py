@@ -27,14 +27,16 @@ while (True):
 
 	try :
 		sheet.append_row(row)
-	except:
+	except Exception as e:
+		print(e)
 		print('Erro ao enviar dados para a nuvem')
 
 	try:
 		with open(os.path.join(dir_path, 'log-temperatura.csv'), 'a') as f:
 			w = csv.writer(f)
 			w.writerow(row)
-	except:
+	except Exception as e:
+		print(e)
 		print('Erro ao salvar dado em log-temperatura.csv')
 
 	time.sleep(10)
