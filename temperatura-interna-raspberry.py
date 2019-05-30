@@ -31,7 +31,7 @@ while (True):
 		print('Erro ao enviar dados para a nuvem')
 
 	try:
-		with open('log-temperatura.csv', 'a') as f:
+		with open(os.path.join(dir_path,'log-temperatura.csv'), 'a') as f:
 			w = csv.writer(f)
 			w.writerow(row)
 	except:
