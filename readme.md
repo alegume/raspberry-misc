@@ -12,7 +12,10 @@
 
 
  - Abra a crontab:
+ 
    `sudo crontab -e`
+   
  - Adicione o script na crontab:
+ 
    `@reboot sleep 60 && /home/pi/Documents/raspberry-misc/temperatura-interna-raspberry.py  >> /home/pi/log_crontab.txt`
    
