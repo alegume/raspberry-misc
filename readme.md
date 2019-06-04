@@ -17,9 +17,9 @@
 
  - Configure o Raspberry para: 1) aceitar comunicação I2C, 2) inicializar após a rede, 3) dar boot em CLI com usuário pi, 4) hostname
 
- - Abra a crontab:
+ - Abra a crontab do usuário pi:
  
-   `sudo crontab -e`
+   `crontab -e`
    
  - Adicione o script na crontab:
  
