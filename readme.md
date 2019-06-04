@@ -1,7 +1,7 @@
  ## Lembretes
 - Instalar dependencias.
 
-  `pip3 install gspread oauth2client`
+  `sudo pip3 install gspread oauth2client`
 
 
 - Crie uma conta no dataplicity.
