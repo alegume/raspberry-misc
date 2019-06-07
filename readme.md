@@ -27,5 +27,4 @@
    
 
 
-### Temperaturas
-https://docs.google.com/spreadsheets/d/1Hw8-rVa7wzrbIT5mSutrP8jpIAwXoScdfnhxPoiWRzs/edit#gid=0
+### Dados em tempo real
