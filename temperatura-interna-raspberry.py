@@ -24,24 +24,21 @@ def getCPUtemperature():
 	return(res.replace('temp=', '').replace("'C\n", ''))
 
 
-while (True):
-	temperatura = float(getCPUtemperature())
+temperatura = float(getCPUtemperature())
 
-	# data : hora, temperatura
-	row = [datetime.now().strftime('%d/%m/%Y %H:%M:%-S'), temperatura]
+# data : hora, temperatura
+row = [datetime.now().strftime('%d/%m/%Y %H:%M:%-S'), temperatura]
 
-	try :
-		worksheet.append_row(row)
-	except Exception as e:
-		print(e)
-		print('Erro ao enviar dados para a nuvem')
+try :
+	worksheet.append_row(row)
+except Exception as e:
+	print(e)
+	print('Erro ao enviar dados para a nuvem')
 
-	try:
-		with open(os.path.join(dir_path, 'log-temperatura.csv'), 'a') as f:
-			w = csv.writer(f)
-			w.writerow(row)
-	except Exception as e:
-		print(e)
-		print('Erro ao salvar dado em log-temperatura.csv')
-
-	time.sleep(10)
+try:
+	with open(os.path.join(dir_path, 'log-temperatura.csv'), 'a') as f:
+		w = csv.writer(f)
+		w.writerow(row)
+except Exception as e:
+	print(e)
+	print('Erro ao salvar dado em log-temperatura.csv')
