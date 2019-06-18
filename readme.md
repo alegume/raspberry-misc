@@ -22,6 +22,7 @@
    `crontab -e`
    
  - Adicione o script na crontab (a cada 2 minutos):
+ 
    `*/2 * * * * /home/pi/Documents/raspberry-misc/temperatura-interna-raspberry.py >> /home/pi/log-temp-2-minutos.txt 2>&1`
  
  - [OU] Adicione o script na crontab (ao iniciar):
