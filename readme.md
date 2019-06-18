@@ -7,7 +7,9 @@
 - Crie uma conta no dataplicity.
 
 - Se tiver problemas em instalar o supervisor, modifique seu /etc/apt/sources.list:
+
   `deb http://mirrordirector.raspbian.org/raspbian/ stretch main contrib non-free rpi firmware`
+  
   `deb http://archive.raspberrypi.org/debian/ stretch main ui`
 
 
