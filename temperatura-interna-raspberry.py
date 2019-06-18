@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import socket
-import time
+#import time
 from datetime import datetime
 import csv
 import gspread
@@ -15,9 +15,9 @@ scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/au
 creds = ServiceAccountCredentials.from_json_keyfile_name(os.path.join(dir_path, 'secret_key.json'), scope)
 client = gspread.authorize(creds)
 # Abre uma o documeto (spreadsheet)
-spreadsheet = client.open('temperatura-raspberryS')
+spreadsheet = client.open(hostname)
 # Abre a planilha (worksheet)
-worksheet = spreadsheet.worksheet(hostname)
+worksheet = spreadsheet.worksheet('temperatura-cpu')
 
 def getCPUtemperature():
 	res = os.popen('vcgencmd measure_temp').readline()
