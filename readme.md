@@ -21,10 +21,10 @@
  
    `crontab -e`
    
- - Adicione o script na crontab:
+ - Adicione o script na crontab (a cada 2 minutos):
+   `*/2 * * * * /home/pi/Documents/raspberry-misc/temperatura-interna-raspberry.py >> /home/pi/log-temp-2-minutos.txt 2>&1`
  
-   `@reboot sleep 60 && /home/pi/Documents/raspberry-misc/temperatura-interna-raspberry.py  >> /home/pi/log_crontab.txt`
-   
+ - [OU] Adicione o script na crontab (ao iniciar):
+ 
+   `@reboot sleep 60 && /home/pi/Documents/raspberry-misc/temperatura-interna-raspberry.py >> /home/pi/log-temp-reboot.txt 2>&1`
 
-
-### Dados em tempo real
