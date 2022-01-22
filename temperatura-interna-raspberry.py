@@ -7,7 +7,7 @@ import csv
 import gspread
 # from oauth2client.service_account import ServiceAccountCredentials
 
-# dir_path = os.path.dirname(os.path.realpath(__file__))
+dir_path = os.path.dirname(os.path.realpath(__file__))
 # hostname = socket.gethostname()
 # # Credenciais do Google Drive API
 # scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
