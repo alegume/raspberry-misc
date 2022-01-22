@@ -22,7 +22,7 @@ def conectar():
     # Conectar
     gc = gspread.service_account()
     # Encontrar planilha
-    sh = gc.open("arquitetura-responsiva")
+    sh = gc.open("pi-utfpr")
     # Encontrar primeira aba
     ws = sh.worksheets()[0]
     return ws
